@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="login" class="login-body">
+    <main class="login-card card">
+        <img src="assets/logo-ut.png" alt="Logo UT" class="logo" onerror="this.style.display='none'">
+        <h1>SITTA</h1>
+        <p class="muted">Sistem Informasi Tiket &amp; Bahan Ajar - UT Daerah</p>
+
+        <form id="formLogin" novalidate>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="contoh: rina@ut.ac.id" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn btn-green">Login</button>
+        </form>
+
+        <div class="row-btn">
+            <button class="btn btn-blue-outline" data-open="modalLupa">Lupa Password</button>
+            <button class="btn btn-outline" data-open="modalDaftar">Daftar</button>
+        </div>
+    </main>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal-bg" id="modalLupa">
+        <div class="modal card">
+            <h2>Lupa Password</h2>
+            <p class="muted">Masukkan email terdaftar untuk menerima tautan reset.</p>
+            <form id="formLupa" novalidate>
+                <label for="emailLupa">Email</label>
+                <input type="email" id="emailLupa" placeholder="Email terdaftar">
+                <button type="submit" class="btn btn-green">Kirim Tautan</button>
+                <button type="button" class="btn btn-outline" data-close>Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div class="modal-bg" id="modalDaftar">
+        <div class="modal card">
+            <h2>Daftar Akun</h2>
+            <form id="formDaftar" novalidate>
+                <label for="regNama">Nama Lengkap</label>
+                <input type="text" id="regNama" placeholder="Nama lengkap">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" placeholder="Email">
+                <label for="regPass">Password (min. 6 karakter)</label>
+                <input type="password" id="regPass" placeholder="Password">
+                <button type="submit" class="btn btn-green">Daftar</button>
+                <button type="button" class="btn btn-outline" data-close>Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

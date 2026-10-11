@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tracking Pengiriman - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="tracking">
+    <div class="layout">
+        <aside id="sidebar" class="sidebar"></aside>
+        <main class="content">
+            <h1>Tracking Pengiriman</h1>
+            <form id="formTracking" class="card search" novalidate>
+                <label for="nomorDO">Nomor Delivery Order</label>
+                <div class="search-row">
+                    <input type="text" id="nomorDO" placeholder="contoh: 2023001234">
+                    <button type="submit" class="btn btn-green">Cari</button>
+                </div>
+            </form>
+
+            <section id="hasil" class="card" hidden>
+                <div class="hasil-head">
+                    <div>
+                        <h2 id="tNama"></h2>
+                        <p class="muted">No. DO: <span id="tDO"></span></p>
+                    </div>
+                    <span id="tStatus" class="badge"></span>
+                </div>
+                <div class="progress">
+                    <div id="bar" class="bar"></div>
+                </div>
+                <div class="steps"><span>Dikirim</span><span>Dalam Perjalanan</span><span>Selesai</span></div>
+
+                <div class="detail-grid">
+                    <div><small>Ekspedisi</small><b id="tEkspedisi"></b></div>
+                    <div><small>Tanggal Kirim</small><b id="tTanggal"></b></div>
+                    <div><small>Jenis Paket</small><b id="tPaket"></b></div>
+                    <div><small>Total Pembayaran</small><b id="tTotal"></b></div>
+                </div>
+
+                <h3>Riwayat Perjalanan</h3>
+                <ul id="timeline" class="timeline"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

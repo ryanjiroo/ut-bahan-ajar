@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Informasi Bahan Ajar - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="stok">
+    <div class="layout">
+        <aside id="sidebar" class="sidebar"></aside>
+        <main class="content">
+            <h1>Informasi Stok Bahan Ajar</h1>
+
+            <div class="card table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Kode Lokasi</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyStok"></tbody>
+                </table>
+            </div>
+
+            <form id="formStok" class="card" novalidate>
+                <h2>Tambah Stok Baru</h2>
+                <div class="form-grid">
+                    <div><label for="kodeLokasi">Kode Lokasi</label><input id="kodeLokasi" placeholder="0JKT01"></div>
+                    <div><label for="kodeBarang">Kode Barang</label><input id="kodeBarang" placeholder="EKMA4216"></div>
+                    <div><label for="namaBarang">Nama Barang</label><input id="namaBarang"
+                            placeholder="Nama bahan ajar"></div>
+                    <div><label for="jenisBarang">Jenis Barang</label>
+                        <select id="jenisBarang">
+                            <option>BMP</option>
+                            <option>NonBMP</option>
+                        </select>
+                    </div>
+                    <div><label for="edisi">Edisi</label><input type="number" id="edisi" min="1" placeholder="1"></div>
+                    <div><label for="stok">Stok</label><input type="number" id="stok" min="0" placeholder="0"></div>
+                </div>
+                <button type="submit" class="btn btn-green">+ Tambah Baris</button>
+            </form>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
